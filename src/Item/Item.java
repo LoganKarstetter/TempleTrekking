@@ -9,36 +9,31 @@ package Item;
 public class Item
 {
     /** Unique item id */
-    private short id;
-    /** Describes worn slot via ItemType.Worn */
-    private byte worn;
+    protected short id;
+    /** Item name */
+    protected String name;
+    /** Item description */
+    protected String desc;
+    /** Describes item type via ItemType.Type */
+    protected byte type;
     /** Describes item rarity via ItemType.Rarity */
-    private byte rarity;
+    protected byte rarity;
 
     /**
      * Create an interact-able game item. Items are found
-     * either in the player's inventory or worn equipment.
+     * either in the player's inventory or in the world.
+     * Items cannot be worn, see WornItem.
      * @param itemId - Unique item id.
-     * @param wornSlot - Worn slot index (ItemType.Worn).
+     * @param itemName - Item name.
+     * @param itemDesc - Item description.
      * @param rarityValue - Rarity value index (ItemType.Rarity).
      */
-    public Item(short itemId, byte wornSlot, byte rarityValue)
+    public Item(short itemId, String itemName, String itemDesc, byte rarityValue)
     {
         id = itemId;
-        worn = wornSlot;
-        rarity = rarityValue;
-    }
-
-    /**
-     * Create an game item that cannot be equipped, but
-     * can be used for other means.
-     * @param itemId - Unique item id.
-     * @param rarityValue - Rarity value index (ItemType.Rarity).
-     */
-    public Item(short itemId, byte rarityValue)
-    {
-        id = itemId;
-        worn = (byte) ItemType.Worn.NUM_WORN.ordinal();
+        name = itemName;
+        desc = itemDesc;
+        type = (byte) ItemType.Type.NONE.ordinal();
         rarity = rarityValue;
     }
 }

@@ -9,8 +9,36 @@ public class ItemType
 {
     /**
      * Enumerations corresponding to a bit position
+     * or array index for the type of item. This enum is
+     * designed to fit a byte.
+     */
+    public enum Type
+    {
+        NONE,      /* 0 */
+        WEAR,      /* 1 */
+        NUM_TYPE
+    }
+
+    /**
+     * Enumerations corresponding to a bit position of
+     * array index for item stats. Do not add more
+     * than 7 enums or this will be unable to suit a byte.
+     */
+    public enum Stat
+    {
+        MELEE_ATT, /* 0 */
+        MELEE_DEF, /* 1 */
+        RANGE_ATT, /* 2 */
+        RANGE_DEF, /* 3 */
+        MAGIC_ATT, /* 4 */
+        MAGIC_DEF, /* 5 */
+        NUM_STAT
+    }
+
+    /**
+     * Enumerations corresponding to a bit position
      * or array index for the rarity of an item. This enum is
-     * designed to fit a byte, don't add more.
+     * designed to fit a byte.
      */
     public enum Rarity
     {
