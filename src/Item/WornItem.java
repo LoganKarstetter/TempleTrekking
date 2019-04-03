@@ -1,9 +1,15 @@
 package Item;
 
+/**
+ * File: WornItem<br>
+ * Desc: Represents items that can be equipped (weapons, armor, etc).<br>
+ * Date: Mon, April 1st, 2019<br>
+ * Auth: Logan Karstetter<br>
+ */
 public class WornItem extends Item
 {
     /** The number of stats tied to a worn item */
-    private static final byte NUM_STATS = 6;
+    private static final byte NUM_STATS = (byte) ItemTypes.Stat.NUM_STAT.ordinal();
 
     /** Describes worn slot via ItemType.Worn */
     private byte worn;
@@ -25,7 +31,7 @@ public class WornItem extends Item
         //All zero stats by default (that's how an array works)
         worn = wornSlot;
         stats = new byte[NUM_STATS];
-        type = (byte) ItemType.Type.WEAR.ordinal();
+        type = (byte) ItemTypes.Type.WEAR.ordinal();
     }
 
     /**
@@ -42,7 +48,7 @@ public class WornItem extends Item
 
         worn = wornSlot;
         stats = itemStats;
-        type = (byte) ItemType.Type.WEAR.ordinal();
+        type = (byte) ItemTypes.Type.WEAR.ordinal();
     }
 
     //TODO: Transfer stats on equip

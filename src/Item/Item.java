@@ -33,7 +33,7 @@ public class Item
         id = itemId;
         name = itemName;
         desc = itemDesc;
-        type = (byte) ItemType.Type.NONE.ordinal();
+        type = (byte) ItemTypes.Type.NONE.ordinal();
         rarity = rarityValue;
     }
 }

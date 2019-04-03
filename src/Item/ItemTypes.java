@@ -5,7 +5,7 @@ package Item;
  * Date: Sat, March 30th, 2019<br>
  * Auth: Logan Karstetter<br>
  */
-public class ItemType
+public class ItemTypes
 {
     /**
      * Enumerations corresponding to a bit position
