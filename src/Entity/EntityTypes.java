@@ -8,6 +8,32 @@ package Entity;
  */
 public class EntityTypes
 {
+    /** The maximum/total amount of health possible  */
+    public static final byte MAX_HEALTH = 100;
+
+    /**
+     * Enumerations corresponding to a bit position
+     * or array index for the health stat of an entity.
+     * This enum is designed to fit a byte.
+     */
+    public enum Health
+    {
+        CURR,      /* 0 */
+        TOTAL,     /* 1 */
+        NUM_HEALTH
+    }
+
+    /**
+     * Enumerations corresponding to array indexes
+     * for the state of an entity. This enum is
+     * does not need to be restricted to a byte.
+     */
+    public enum State
+    {
+        IDLE,      /* 0 */
+        NUM_STATE
+    }
+
     /**
      * Enumerations corresponding to a bit position
      * or array index for the type of entity.
@@ -16,21 +42,7 @@ public class EntityTypes
     public enum Type
     {
         NONE,      /* 0 */
-        DYNMC,     /* 1 */
-        LIVING,    /* 2 */
         NUM_TYPE
-    }
-
-    /**
-     * Enumerations corresponding to a bit position
-     * or array index for the health stat of entity.
-     * This enum is designed to fit a byte.
-     */
-    public enum Health
-    {
-        CURR,      /* 0 */
-        TOTAL,     /* 1 */
-        NUM_HEALTH
     }
 }
 

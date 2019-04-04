@@ -9,7 +9,7 @@ package World;
 public class WorldItem
 {
     /** Distance to the position to allow pickup */
-    public static final byte PICKUP_RADIUS = 5;
+    public static final byte PICKUP_RADIUS = 5; //TODO: Move to ItemTypes?
 
     /** Id of wrapped item */
     private short itemId;
@@ -19,7 +19,7 @@ public class WorldItem
     private float spawnRate;
 
     /**
-     * Create an non-respawning, interact-able world item.
+     * Create a non-respawning, interact-able world item.
      * @param itemId - Id of wrapped item.
      * @param itemPos - World position relative to origin.
      */
@@ -31,7 +31,7 @@ public class WorldItem
     }
 
     /**
-     * Create an spawning, interact-able world item.
+     * Create a spawning, interact-able world item.
      * @param itemId - Id of wrapped item.
      * @param itemPos - World position relative to origin.
      * @param respawnRate - Respawn rate in ms.

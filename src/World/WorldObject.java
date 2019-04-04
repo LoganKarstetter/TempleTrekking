@@ -4,31 +4,25 @@ import java.awt.Rectangle;
 
 /**
  * File: WorldObject<br>
- * Desc: Represents basic objects found within the world.<br>
- * Date: Mon, April 1st, 2019<br>
+ * Desc: Wrapper for objects found in the game world.<br>
+ * Date: Wed, April 3rd, 2019<br>
  * Auth: Logan Karstetter<br>
  */
 public class WorldObject
 {
-    /** Unique object id */
+    /** Unique entity id */
     private short objectId;
-    /** Describes object size and pos */
+    /** Describes size and position */
     private Rectangle boundingBox;
-    /** Describes object type via WorldType.Type */
-    private byte type;
 
     /**
-     * Create a WorldObject. WorldObjects are found within
-     * the game world and may represent physical objects or
-     * invisible barriers.
-     * @param worldObjectId - Unique object id.
-     * @param objectBox - Rectangle representing size and position.
+     * Create an Object that exists within the game world.
+     * @param objectId - Id of wrapped object.
+     * @param objectDim - Describes size and position of an object.
      */
-    public WorldObject(short worldObjectId, Rectangle objectBox )
+    public WorldObject(short objectId, Rectangle objectDim)
     {
-        objectId = worldObjectId;
-        boundingBox = objectBox;
-        type = (byte) WorldTypes.Type.NONE.ordinal();
+        this.objectId = objectId;
+        boundingBox = objectDim;
     }
-
 }

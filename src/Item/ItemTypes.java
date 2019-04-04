@@ -1,4 +1,5 @@
 package Item;
+
 /**
  * File: ItemTypes<br>
  * Desc: Contains enumerations for item classes.<br>
