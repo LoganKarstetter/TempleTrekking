@@ -8,9 +8,6 @@ package World;
  */
 public class WorldItem
 {
-    /** Distance to the position to allow pickup */
-    public static final byte PICKUP_RADIUS = 5; //TODO: Move to ItemTypes?
-
     /** Id of wrapped item */
     private short itemId;
     /** Represents world position (x,y) */

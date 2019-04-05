@@ -15,7 +15,10 @@ public class ObjectManager
     /** Corresponding images for objects, access by object id */
     private BufferedImage[] objectImages;
 
-
+    /**
+     * Create an ObjectManager for creating and controlling
+     * Object definitions and access.
+     */
     public ObjectManager()
     {
         //Initialize arrays

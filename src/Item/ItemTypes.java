@@ -8,6 +8,11 @@ package Item;
  */
 public class ItemTypes
 {
+    /** Max number of unique item definitions */
+    protected static final short ITEM_CAPACITY = 256;
+    /** Distance from the item's position to allow pickup */
+    public static final byte PICKUP_RADIUS = 5;
+
     /**
      * Enumerations corresponding to a bit position
      * or array index for the type of item. This enum is

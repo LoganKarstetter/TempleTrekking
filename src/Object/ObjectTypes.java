@@ -9,7 +9,7 @@ package Object;
 public class ObjectTypes
 {
     /** Max number of unique object definitions */
-    public static final short OBJECT_CAPACITY = 256;
+    protected static final short OBJECT_CAPACITY = 256;
 
     /**
      * Enumerations corresponding to a bit position
